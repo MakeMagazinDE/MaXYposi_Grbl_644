@@ -479,12 +479,12 @@ void jogpad_check() {
         msg_to_display = 10; // now OFF!
   		  temp_state = mist_on;
 	    	coolant_stop();
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_FLOOD);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_FLOOD;
  	    	if (temp_state) coolant_set_state(COOLANT_MIST_ENABLE);
  		} else {
         msg_to_display = 11;
  	    	coolant_set_state(COOLANT_FLOOD_ENABLE);
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_FLOOD);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_FLOOD;
 	    }
   	}	 		
   	if (buttons_temp & (1<<MIST_ON_SW)) {
@@ -492,12 +492,12 @@ void jogpad_check() {
         msg_to_display = 12; // now OFF!
   		  temp_state = flood_on;
 	    	coolant_stop();
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_MIST);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_MIST;
  	    	if (temp_state) coolant_set_state(COOLANT_FLOOD_ENABLE);
  		} else {
         msg_to_display = 13;
 	    	coolant_set_state(COOLANT_MIST_ENABLE);
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_MIST);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_MIST;
 	    }
   	}	 		
   	  	
@@ -505,44 +505,44 @@ void jogpad_check() {
   		if (atc_on) {
         msg_to_display = 14; // now OFF!
  	    	coolant_set_state(ATC_DISABLE);
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_ATC);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_ATC;
  		} else {
         msg_to_display = 15;
 	    	coolant_set_state(ATC_ENABLE);
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_ATC);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_ATC;
 	    }
   	}	 		
   	if (buttons_temp & (1<<AUX1_ON_SW)) {
   		if (aux1_on) {
         msg_to_display = 16;
 	    	coolant_set_state(AUX1_DISABLE);
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_AUX1);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_AUX1;
   		} else {
         msg_to_display = 17;
 	    	coolant_set_state(AUX1_ENABLE);
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_AUX1);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_AUX1;
 	  	}
   	}	 		
   	if (buttons_temp & (1<<AUX2_ON_SW)) {
   		if (aux2_on) {
         msg_to_display = 18;
 	    	coolant_set_state(AUX2_DISABLE);
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_AUX2);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_AUX2;
   		} else {
         msg_to_display = 19;
 	    	coolant_set_state(AUX2_ENABLE);
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_AUX2);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_AUX2;
 	  	}
   	}	 		
   	if (buttons_temp & (1<<AUX3_ON_SW)) {
   		if (aux3_on) {
         msg_to_display = 20;
 	    	coolant_set_state(AUX3_DISABLE);
- 	    	gc_state.modal.coolant &= ~(1<<COOLANT_STATE_AUX3);
+ 	    	gc_state.modal.coolant &= ~COOLANT_STATE_AUX3;
   		} else {
         msg_to_display = 21;
 	    	coolant_set_state(AUX3_ENABLE);
- 	    	gc_state.modal.coolant |= (1<<COOLANT_STATE_AUX3);
+ 	    	gc_state.modal.coolant |= COOLANT_STATE_AUX3;
 	  	}
   	}
   	if (spindle_on) {	 		
