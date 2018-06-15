@@ -13,8 +13,8 @@ zur MaXYposi-Schrittmotorsteuerung, Kontrollpult (MaXYpulti).
     =============================================================================
     
     PSS 254/4G, Wire-To-Board 4-pol. RM2,54      1   PL6
-    PSS 254/5G, Wire-To-Board 4-pol. RM2,54      2   PL1 PL2
-    PSS 254/6G, Wire-To-Board 4-pol. RM2,54      2   PL1 PL4    
+    PSS 254/5G, Wire-To-Board 5-pol. RM2,54      2   PL1 PL2
+    PSS 254/6G, Wire-To-Board 6-pol. RM2,54      2   PL4    
     Zweireihige Pfostenleiste RM 2.54            1   PL3                 
     WSL 16, Wannenstecker 16pol.                 1   PL5               
     Jumper 2pol. RM2.54                          1   JP1                 
